@@ -53,7 +53,8 @@ class TestBattleModel(unittest.TestCase):
     def test_get_battle_score(self):
         meal = Meal(id=1, meal="Pizza", cuisine="Italian", price=10.0, difficulty="LOW")
         score = self.battle_model.get_battle_score(meal)
-        expected_score = (meal.price * len(meal.cuisine)) - 3          self.assertEqual(score, expected_score)
+        expected_score = (meal.price * len(meal.cuisine)) - 3          
+        self.assertEqual(score, expected_score)
 
 
 if __name__ == "__main__":
