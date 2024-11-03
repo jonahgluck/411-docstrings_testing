@@ -169,7 +169,7 @@ def get_leaderboard(sort_by: str="wins") -> dict[str, Any]:
         raise e
 
 def get_meal_by_id(meal_id: int) -> Meal:
-    """ Fetches a meal from the database by its ID. 
+    """ Retrieves a meal from the database by its ID. 
         Args: 
             meal_id (int): The ID of the meal to retrieve. 
         Returns:
@@ -199,7 +199,7 @@ def get_meal_by_id(meal_id: int) -> Meal:
 
 
 def get_meal_by_name(meal_name: str) -> Meal:
-    """ Fetches a meal from the database by its name. 
+    """ Retrieves a meal from the database by its name. 
         Args: 
             meal_id (int): The name of the meal to retrieve. 
         Returns:
