@@ -14,6 +14,20 @@ configure_logger(logger)
 
 @dataclass
 class Song:
+    """ This class represents a song with specific details and validation criteria.
+
+        Attributes:
+            id (int): Unique identifier for the song.
+            artist (str): Artist name.
+            title (str): Song title.
+            year (int): The release year of the song.
+            genre (str): Genre of the song.
+            duration (int): Duration of the song in seconds.
+
+            Raises:
+                ValueError: If 'duration' is not positive or 'year' is not after 1900.
+        
+    """
     id: int
     artist: str
     title: str
@@ -22,6 +36,11 @@ class Song:
     duration: int  # in seconds
 
     def __post_init__(self):
+        """ Validates the song details after the instance is created.
+
+            Raises:
+                ValueError: If 'duration' is non-positive or 'year' is not greater than 1900.
+        """
         if self.duration <= 0:
             raise ValueError(f"Duration must be greater than 0, got {self.duration}")
         if self.year <= 1900:
